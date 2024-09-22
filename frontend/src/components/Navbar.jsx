@@ -7,7 +7,6 @@ const Navbar = () => {
   const { authUser, logOut } = useContext(GlobalContext); 
   const { cartItems } = useCart();
   const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
-
   return (
     <nav className='Barra'>
       <div className="btn-group me-2" role="group" aria-label="First group">
@@ -17,7 +16,7 @@ const Navbar = () => {
       </div>
       <div className="d-inline-flex gap-1">
         <NavLink to="/" className="btn active" role="button" style={{ fontSize: 'small' }}>
-          <img src='/img/pizza.png' className='pizzaimg' alt="Home" />Home
+          <img src='https://web.whatsapp.com/emoji/v1/15/1/2/single/w/64/01f355.png' className='pizzaimg' alt="Home" />Home
         </NavLink>
         
         {authUser.token ? (
