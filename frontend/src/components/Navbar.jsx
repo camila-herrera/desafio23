@@ -22,7 +22,7 @@ const Navbar = () => {
         {authUser.token ? (
           <>
             <NavLink to="/profile" className="btn active" role="button" style={{ fontSize: 'small' }}>
-              <img src='candado.png' className='pizzaimg' alt="Profile" />Profile
+              <img src='/img/candado.png' className='pizzaimg' alt="Profile" />Profile
             </NavLink>
             <button onClick={logOut} className="btn active" role="button" style={{ fontSize: 'small' }}>
               <img src='candado.png' className='pizzaimg' alt="Logout" />Logout
@@ -31,7 +31,7 @@ const Navbar = () => {
         ) : (
           <>
             <NavLink to="/login" className="btn active" role="button" style={{ fontSize: 'small' }}>
-              <img src='candado(1).png' className='pizzaimg' alt="Login" />Login
+              <img src='./assets\img\candado(1).png' className='pizzaimg' alt="Login" />Login
             </NavLink>
             <NavLink to="/register" className="btn active" role="button" style={{ fontSize: 'small' }}>
               <img src='candado(1).png' className='pizzaimg' alt="Register" />Register

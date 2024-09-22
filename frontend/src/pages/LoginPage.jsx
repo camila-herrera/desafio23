@@ -1,21 +1,15 @@
 import React, { useContext, useState } from 'react';
-import { GlobalContext } from '../context/UserContext';  // Cambia la importación a GlobalContext
+import { GlobalContext } from '../context/UserContext';
 import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
-  const { setAuthUser } = useContext(GlobalContext);  // Usa GlobalContext aquí
-  const [username, setUsername] = useState('');
+  const { setAuthUser } = useContext(GlobalContext);
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Validación simple
-    if (username && password) {
-      setAuthUser({ username, password, token: true });
-      navigate('/profile');  // Redirigir al perfil
-    }
-  };
+    if (username && password) {setAuthUser({ username, password, token: true }); navigate('/');}};
 
   return (
     <div className="Login">

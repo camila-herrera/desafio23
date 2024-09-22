@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';  // No olvides importar useContext
+import React, { useContext } from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 import { useCart } from '../context/CartContext';
-import { GlobalContext } from '../context/UserContext'; // Importa GlobalContext
+import { GlobalContext } from '../context/UserContext';
 
 const Cart = () => {
-  const { authUser } = useContext(GlobalContext); // Usar GlobalContext en lugar de GlobalProvider
+  const { authUser } = useContext(GlobalContext);
   const isUserAuthenticated = authUser.token;
   const { cartItems, removeFromCart, updateQuantity } = useCart();
   const getTotal = () => cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
